@@ -1,3 +1,4 @@
+import withSceleton from "../../helpers/hocs/withSceleton";
 import NewsItem from "../NewsItem/NewsItem";
 import styles from "../NewsList/style.module.css";
 
@@ -11,4 +12,5 @@ const NewsList = ({ news }) => {
   );
 };
 
-export default NewsList;
+const NewsListWithSceleton = withSceleton(NewsList, "item", 10);
+export default NewsListWithSceleton;
